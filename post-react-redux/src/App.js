@@ -26,7 +26,7 @@ class App extends Component {
         details: "assignment of integrify"
       }
     ],
-    showDetails: false
+    selectedPostId: null
   };
 
   handleData = obj => {
@@ -37,11 +37,15 @@ class App extends Component {
     });
   };
 
+  showPost = id => {
+    this.setState({ selectedPostId: id });
+  };
+
   render() {
     return (
       <div className="App">
         <Navigation />
-        <Home posts={this.state} />
+        <Home posts={this.state} showPost={this.showPost} />
         <Addpost saveInput={this.handleData} posts={this.state.posts} />
       </div>
     );
