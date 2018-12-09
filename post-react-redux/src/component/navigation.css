@@ -1,0 +1,22 @@
+.nav{
+    display:flex;
+    background-color: purple;
+
+}
+
+ul>li{
+    display: inline;
+    list-style: none;
+    color: white;
+    padding : 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+ul>li:hover{
+    background-color: white;
+    color:purple;
+    border-bottom: 2px solid gold;
+    border-right: 2px solid gold;
+    border-left: 2px solid gold;
+}

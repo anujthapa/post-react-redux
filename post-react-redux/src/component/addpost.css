@@ -1,0 +1,20 @@
+.body{
+    background-color: #7F0F7E;
+    border:10px solid white;
+
+}
+input[type = 'text']{
+    margin:10px;
+    padding: 5px;
+}
+label{
+    font-weight: bolder;
+    margin:10px;
+    margin-bottom: 10px;
+}
+button{
+    width: inherit;
+}
+.hide{
+    display: none;
+}

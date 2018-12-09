@@ -1,0 +1,24 @@
+
+.PostBody{
+    font-size: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    margin:2rem;
+}
+
+.post{
+    border:1px gray solid;
+    padding: 1rem;
+    width: 60vw;
+    margin:1vh;
+    box-shadow: 5px 10px #888888;
+    
+
+}
+.post:hover{
+    box-shadow: 5px 10px 8px 10px #888888;
+    transition-timing-function: linear 2;
+   
+}
