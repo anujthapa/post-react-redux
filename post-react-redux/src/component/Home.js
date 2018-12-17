@@ -10,9 +10,10 @@ class Home extends React.Component {
   };
 
   deleteHandaler = id => {
+    console.log(id);
     const post = this.props.posts.posts;
-    const posts = post.splice(id, 1);
-    this.setState({ posts });
+    post.splice(id, 1);
+    this.setState({ post });
   };
 
   render() {
@@ -24,10 +25,9 @@ class Home extends React.Component {
               <div>
                 <div onClick={() => this.props.showPost(item.id)}>
                   <Post
-                    id={item.id}
                     key={index}
                     item={item}
-                    deleteHandaler={() => this.deleteHandaler}
+                    deleteHandaler={() => this.deleteHandaler(index)}
                   />
                 </div>
               </div>
@@ -39,7 +39,6 @@ class Home extends React.Component {
             item => item.id === this.props.posts.selectedPostId
           )}
         />
-        ;
       </div>
     );
   }

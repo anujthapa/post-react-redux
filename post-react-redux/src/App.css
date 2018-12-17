@@ -37,3 +37,6 @@ button{
   margin: 5vh;
   font-size: inherit;
 }
+.none{
+  display: none;
+}

@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import Home from "./component/Home";
 import Navigation from "./component/Navigation";
 import Addpost from "./component/Addpost";
+import Post from "./component/Post";
+import Detailpost from "./component/DetailPost";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import "./App.css";
 
 class App extends Component {
@@ -44,9 +48,35 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Navigation />
-        <Home posts={this.state} showPost={this.showPost} />
-        <Addpost saveInput={this.handleData} posts={this.state.posts} />
+        <Router>
+          <div>
+            <Navigation />
+            <Switch>
+              <Route
+                exact
+                path="/"
+                component={props => (
+                  <Home
+                    {...props}
+                    posts={this.state}
+                    showPost={this.showPost}
+                  />
+                )}
+              />
+              <Route
+                exact
+                path="/addpost"
+                component={props => (
+                  <Addpost
+                    {...props}
+                    saveInput={this.handleData}
+                    posts={this.state.posts}
+                  />
+                )}
+              />
+            </Switch>
+          </div>
+        </Router>
       </div>
     );
   }
